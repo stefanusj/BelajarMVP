@@ -23,6 +23,7 @@
         android:drawableLeft="@drawable/ic_person_outline"
         android:drawablePadding="8dp"
         android:hint="Username"
+        android:inputType="text"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintTop_toBottomOf="@id/ivLogo" />
@@ -34,6 +35,7 @@
         android:drawableLeft="@drawable/ic_lock_outline"
         android:drawablePadding="8dp"
         android:hint="Password"
+        android:inputType="textPassword"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintTop_toBottomOf="@id/etUsername" />

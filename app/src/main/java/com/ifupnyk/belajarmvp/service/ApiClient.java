@@ -1,4 +1,4 @@
-package com.ifupnyk.belajarmvp;
+package com.ifupnyk.belajarmvp.service;
 
 import retrofit2.Retrofit;
 import retrofit2.converter.gson.GsonConverterFactory;

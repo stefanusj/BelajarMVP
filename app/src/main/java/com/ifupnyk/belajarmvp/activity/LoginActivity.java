@@ -18,21 +18,6 @@ public class LoginActivity extends AppCompatActivity implements LoginView {
     private EditText etUsername, etPassword;
 
     private LoginPresenter presenter;
-
-    @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_login);
-
-        presenter = new LoginPresenter(this);
-
-        btnLogin = findViewById(R.id.btnLogin);
-        etUsername = findViewById(R.id.etUsername);
-        etPassword = findViewById(R.id.etPassword);
-
-        btnLogin.setOnClickListener(onLoginClicked);
-    }
-
     private View.OnClickListener onLoginClicked = new View.OnClickListener() {
         @Override
         public void onClick(View v) {
@@ -48,7 +33,22 @@ public class LoginActivity extends AppCompatActivity implements LoginView {
     };
 
     @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_login);
+
+        presenter = new LoginPresenter(this);
+
+        btnLogin = findViewById(R.id.btnLogin);
+        etUsername = findViewById(R.id.etUsername);
+        etPassword = findViewById(R.id.etPassword);
+
+        btnLogin.setOnClickListener(onLoginClicked);
+    }
+
+    @Override
     public void onLoginSuccess() {
         startActivity(new Intent(LoginActivity.this, MainActivity.class));
+        finish();
     }
 }

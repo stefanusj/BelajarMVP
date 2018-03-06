@@ -2,7 +2,7 @@ package com.ifupnyk.belajarmvp.model.response;
 
 import java.util.List;
 
-public class ContactModel {
+public class Contacts {
 
     private List<Contact> contacts;
 
